@@ -1,7 +1,6 @@
-# TEMPLATE repo for Modules
+# Welcome to React
+All the coursework is listed as issues on this repo. You will copy these issues to your Coursework Planner, which is one repo that will hold all your coursework and assignments for the entire course.
 
-## Tasks
-- [ ] Set up example board 
-- [ ] Populate repo with coursework issues from Google Classroom Boilerplate
-- [ ] Add core Actions from org store https://docs.github.com/en/actions/creating-actions/sharing-actions-and-workflows-with-your-organization
+If you do not already have your own Coursework Planner, set one up now:
 
+https://github.com/CodeYourFuture/Coursework-Planner
