@@ -1,0 +1,59 @@
+:root {
+  --font: 400 100%/1.5 "Raleway", system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  --color--ink: color(srgb 0.95 0.93 0.97);
+  --color--paper: #38333d;
+  --color--accent: hsla(262, 100%, 67%, 1);
+  --space--gap: 1rem;
+  --space--s: calc(var(--space--gap) / 8);
+  --space--m: calc(var(--space--gap) / 2);
+  --space--l: calc(var(--space--gap) * 2);
+  --space--container: 1280px;
+  --border: 1px solid transparent;
+  --border-radius: var(var(--space--s));
+}
+
+a {
+  color: currentColor;
+}
+a:hover,
+a:focus {
+  color: var(--color--accent);
+}
+
+button {
+  border-radius: var(--border-radius);
+  border: var(--border);
+  padding: var(--space--m) var(--space--l);
+  font: var(--font);
+  color: var(--color--ink);
+  background: var(--color--paper);
+  box-shadow: 1px 2px 10px var(--color--accent);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: var(--color--accent);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+body {
+  font: var(--font);
+  margin: 0;
+  display: grid;
+  place-all: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--color--ink);
+  background-color: var(--color--paper);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color--ink: #242424;
+    --color--paper: rgba(255, 255, 255, 0.87);
+  }
+}

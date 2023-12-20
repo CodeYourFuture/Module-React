@@ -1,0 +1,15 @@
+.search {
+  &__form {
+    display: flex;
+    gap: var(--space--gap);
+    align-items: stretch;
+  }
+  &__label {
+    align-self: center;
+  }
+  &__input {
+    padding: var(--space--m);
+    border: var(--border);
+    border-radius: var(--border-radius);
+  }
+}
