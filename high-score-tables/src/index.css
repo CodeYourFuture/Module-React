@@ -1,0 +1,81 @@
+:root {
+  --font: 400 100%/1.5 "Pixelify Sans", "Raleway", system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
+  --color--ink: color(srgb 0.95 0.93 0.97);
+  --color--paper: #231b2e;
+  --color--accent: hsla(262, 100%, 67%, 1);
+  --space--gap: 1rem;
+  --space--s: calc(var(--space--gap) / 8);
+  --space--m: calc(var(--space--gap) / 2);
+  --space--l: calc(var(--space--gap) * 2);
+  --space--container: 1280px;
+  --border: 1px solid transparent;
+  --border-radius: var(var(--space--s));
+}
+
+a {
+  color: currentColor;
+}
+a:hover,
+a:focus {
+  color: var(--color--accent);
+}
+
+button {
+  border-radius: var(--border-radius);
+  border: var(--border);
+  border-color: var(--color--accent);
+  padding: var(--space--m) var(--space--l);
+  font: var(--font);
+  color: var(--color--ink);
+  background: var(--color--paper);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: var(--color--ink);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+body {
+  font: var(--font);
+  text-transform: uppercase;
+  margin: 0;
+  display: grid;
+  place-all: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--color--ink);
+  background-color: var(--color--paper);
+}
+
+svg,
+img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.is-invisible {
+  position: absolute;
+  margin-left: -999em;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color--ink: #242424;
+    --color--paper: rgba(255, 255, 255, 0.87);
+  }
+}
