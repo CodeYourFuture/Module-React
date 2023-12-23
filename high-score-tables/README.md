@@ -59,7 +59,7 @@ Level 1 challenge screenshot example.
 
 ### Getting Started
 
-Make a new branch `feature/high-score-tables` and work in that branch for this project.
+Make a new branch `project/high-score-tables` and work in that branch for this project.
 
 ### The data:
 
@@ -67,7 +67,7 @@ The data is available in data/scores.json
 
 ## Hosting:
 
-Fork this repo and host it on Netlify. You will need to deploy only this folder, not the whole repo, as you will deploy other projects from this same repo later.
+Fork this repo and host it on Netlify. You will need to deploy only this directory, not the whole repo.
 
 Name your netlify site `cyf-YOURGITHUBUSERNAME-scores`
 
