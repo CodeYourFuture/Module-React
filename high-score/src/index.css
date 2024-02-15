@@ -1,0 +1,60 @@
+:root {
+  font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  padding-inline: 2rem;
+  display: grid;
+  justify-content: center;
+  border: 1px solid blue;
+  margin-top: 1rem;
+}
+.heading {
+  text-align: center;
+  color: rgb(38, 144, 187);
+}
+caption {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgb(38, 144, 187);
+  letter-spacing: 0.2rem;
+}
+.table {
+  text-align: center;
+  width: 30vw;
+  margin-block: 0.4rem;
+  border: 8px solid rgb(119, 220, 18);
+}
+.tbody-card{
+  border: 3px solid black;
+}
+th {
+  border-bottom: 1px solid blueviolet;
+}
+td {
+  width: 40vw;
+}
+.score {
+  color: brown;
+  font-weight: 700;
+}
