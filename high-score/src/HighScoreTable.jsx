@@ -14,4 +14,6 @@ const HighScoreTable = ({ country, scores = [] }) => (
   </div>
 );
 
+
+
 export default HighScoreTable;
