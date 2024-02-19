@@ -45,11 +45,8 @@ caption {
   margin-block: 0.4rem;
   border: 8px solid rgb(119, 220, 18);
 }
-.tbody-card{
-  border: 3px solid black;
-}
-th {
-  border-bottom: 1px solid blueviolet;
+.player{
+  border-bottom: 1px solid black;
 }
 td {
   width: 40vw;

@@ -10,6 +10,9 @@ const App = () => (
     ))}
   </div>
 );
+
+
+//Sort the country name Alphabetically
 allCountryScores.sort(function (a, b) {
   if (a.name < b.name) {
     return -1;
