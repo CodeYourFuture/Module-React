@@ -7,20 +7,38 @@ function App() {
     <>
       <h1>HIGH SCORES PER COUNTRY</h1>
       {allCountryScores.map((country, index) => (
-        <table>
+        <table
+          style={{
+            border: "1px solid black",
+            borderSpacing: "10px",
+            width: "100%",
+          }}
+        >
           <thead>
             <tr>
-              <th scope="col" key={index}>
+              <th scope="col" style={{ border: "2px solid red" }} key={index}>
                 {country.name}
               </th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <ul style={{ borderBottom: "2px solid blue" }} scope="col">
+                <td style={{ padding: "1px" }}>player</td>
+                <td style={{ paddingLeft: "40px" }}>score</td>
+              </ul>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
               {country.scores.map((score, index) => (
-                <ul scope="col" key={index}>
-                  <td>{score.n}</td>
-                  <td>{score.s}</td>
+                <ul
+                  style={{ borderBottom: "1px solid red" }}
+                  scope="col"
+                  key={index}
+                >
+                  <td style={{ marginRight: "1px" }}>{score.n}</td>
+                  <td style={{ marginLeft: "90px" }}>{score.s}</td>
                 </ul>
               ))}
             </tr>
