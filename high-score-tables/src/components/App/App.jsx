@@ -1,16 +1,34 @@
-import HighScoreTable from "@/components/HighScoreTable/HighScoreTable.jsx";
-import scores from "@/data/scores.json";
 import "./App.scss";
+import "../scores.js";
+import allCountryScores from "../scores.js";
 
-const App = () => (
-  <div className="app">
-    <header className="app__header">
-      <h1 className="app__heading">High Scores</h1>
-    </header>
-    {scores.map(({ name, scores }, index) => (
-      <HighScoreTable country={name} scores={scores} key={index} />
-    ))}
-  </div>
-);
+function App() {
+  return (
+    <>
+      <h1>HIGH SCORES PER COUNTRY</h1>
+      {allCountryScores.map((country, index) => (
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" key={index}>
+                {country.name}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {country.scores.map((score, index) => (
+                <ul scope="col" key={index}>
+                  <td>{score.n}</td>
+                  <td>{score.s}</td>
+                </ul>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      ))}
+    </>
+  );
+}
 
 export default App;
