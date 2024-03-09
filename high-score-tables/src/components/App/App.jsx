@@ -2,7 +2,14 @@ import "./App.scss";
 import "../scores.js";
 import allCountryScores from "../scores.js";
 
+function byName(a, b) {
+  if (a.name < b.name) return -1;
+  if (a.name > b.name) return 1;
+  return 0;
+}
+
 function App() {
+  allCountryScores.sort(byName);
   return (
     <>
       <h1>HIGH SCORES PER COUNTRY</h1>
