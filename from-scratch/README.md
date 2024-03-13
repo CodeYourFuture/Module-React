@@ -103,7 +103,7 @@ You know how sometimes you get code review telling you to remove files like /nod
 
 ## Eslint and Prop-types
 
-New Vite projects may encounter issues with Eslint, displaying red marks below some variables. This occurs because the default Eslint configuration requires prop-types in React projects. Here's how to resolve it:
+Eslint might display red marks below some variables in a new Vite project. This happens because the default Eslint configuration requires prop-types in React projects. Here's how to resolve it:
 
 1. Locate the file named `.eslintrc.cjs` in your project's root folder.
 
