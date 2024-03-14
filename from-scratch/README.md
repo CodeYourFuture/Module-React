@@ -101,6 +101,34 @@ Read `high-score-tables` for a completed example of `vite.config.js`.
 
 You know how sometimes you get code review telling you to remove files like /node_modules or .vscode settings? Vite has created a `.gitignore` file for you. Have a look at it and see if you agree with what it's ignoring. You can add more files to ignore if you want.
 
+## Eslint and Prop-types
+
+Eslint might display red marks below some variables in a new Vite project. This happens because the default Eslint configuration requires prop-types in React projects. Here's how to resolve it:
+
+1. Find the file `.eslintrc.cjs` in your project's root folder.
+
+2. Add the following line to the `rules` property:
+
+   ```json
+   "react/prop-types": "off"
+   ```
+
+   Your `rules` property should now look like this:
+
+   ```json
+   rules: {
+     'react/jsx-no-target-blank': 'off',
+     'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+     ],
+     "react/prop-types": "off"
+   }
+   ```
+3. Save the file.
+
+The red marks indicating prop-types issues in your code should now disappear.
+
 ## README.md
 
 Now you need to update your README.md to explain how to run the project. Vite has created a starter file for you, and you will need to update it with your changes.
