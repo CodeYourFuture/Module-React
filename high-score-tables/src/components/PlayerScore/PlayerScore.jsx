@@ -1,10 +1,12 @@
-import "./PlayerScore.scss";
+import React from 'react';
 
-const PlayerScore = ({ name, score }) => (
-  <tr className="player">
-    <td>{name}</td>
-    <td>{score}</td>
-  </tr>
-);
+const PlayerScore = ({ name, score }) => {
+  return (
+    <tr>
+      <td>{name}</td>
+      <td>{score}</td>
+    </tr>
+  );
+};
 
 export default PlayerScore;

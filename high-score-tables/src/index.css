@@ -13,6 +13,36 @@
   --border-radius: var(var(--space--s));
 }
 
+.high-score-tables-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.high-score-table {
+  flex: 1;
+  border-collapse: collapse;
+  margin: 10px; /* Add spacing around tables */
+}
+
+
+.high-score-table th,
+.high-score-table td {
+    padding: 10px;
+  text-align: center;
+}
+
+
+
+.high-score-table th {
+  background-color: #f0f0f0;
+}
+
+.highscore-tables tr {
+  text-align: center; /* Center score column */
+  margin-left: 300px; 
+}
+
 a {
   color: currentColor;
 }
@@ -78,4 +108,26 @@ li {
     --color--ink: #242424;
     --color--paper: rgba(255, 255, 255, 0.87);
   }
+}
+
+
+
+.high-score-container {
+  text-align: center;
+  margin: 0 auto;
+  width: 80%; /* Adjust as needed */
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em; /* Adjust font size */
+}
+
+.country-data {
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1
 }
