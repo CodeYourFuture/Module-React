@@ -1,22 +1,31 @@
-import PlayerScore from "@/components/PlayerScore/PlayerScore.jsx";
-import "./HighScoreTable.scss";
-// https://react.dev/learn/rendering-lists
+import React from 'react';
 
-const HighScoreTable = ({ country, scores = [] }) => (
-  <table className="scores">
-    <caption>{country}</caption>
-    <thead>
-      <tr>
-        <th>Player</th>
-        <th>Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      {scores.map((score, index) => (
-        <PlayerScore key={index} name={score.n} score={score.s} />
-      ))}
-    </tbody>
-  </table>
+const PlayerScore = ({ name, score }) => (
+  <tr>
+    <td>{name}</td>
+    <td>{score}</td>
+  </tr>
 );
+
+const HighScoreTable = ({ country, scores }) => {
+  return (
+    <div className="high-score-table">
+      <h2>{country}</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          {scores.map((playerData) => (
+            <PlayerScore key={playerData.n} name={playerData.n} score={playerData.s} />
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 export default HighScoreTable;
